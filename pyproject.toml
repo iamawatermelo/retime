@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "retime"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.10"
+license = "WTFPL"
+keywords = []
+authors = [
+  { name = "iamawatermelo", email = "144068104+iamawatermelo@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: Implementation :: CPython"
+]
+dependencies = [
+    "aiohttp~=3.10.10",
+    "typer-slim~=0.12.5",
+    "pydantic~=2.9.2"
+]
+
+[project.urls]
+Documentation = "https://github.com/iamawatermelo/retime#readme"
+Issues = "https://github.com/iamawatermelo/retime/issues"
+Source = "https://github.com/iamawatermelo/retime"
+
+[project.scripts]
+retime = "retime.__main__:app"
+
+[tool.hatch.version]
+path = "src/retime/__about__.py"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+reportMissingModuleSource = false
+reportUnusedImport = true
+
+[tool.hatch.envs.default]
+path = "./.venv/"
