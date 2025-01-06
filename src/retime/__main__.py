@@ -70,14 +70,13 @@ def _resend(project_name: str, match_folder: str):
                 }
             }
             
-            # new_heartbeat["user_agent"] = re.sub(
-            #     r"(\([\S]+\))\s",
-            #     r"\1 github.com/iamawatermelo/retime ",
-            #     heartbeat["user_agent_id"]
-            # )
+            new_heartbeat["user_agent"] = re.sub(
+                r"(\([\S]+\))\s",
+                r"\1 github.com/iamawatermelo/retime ",
+                heartbeat["user_agent_id"]
+            )
             new_heartbeat["time"] += 2
             new_heartbeat["project"] = project_name
-            new_heartbeat["user_agent"] = heartbeat["user_agent_id"]
             new_heartbeat["machine_name"] = heartbeat["machine_name_id"]
             
             modified_heartbeats.append(new_heartbeat)
