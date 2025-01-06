@@ -7,6 +7,10 @@ Use the BEARER_TOKEN environment variable to supply a token.
 
 ## how
 
+> [!WARNING]
+> With great power comes great responsibility.  
+> Use Retime responsibly. High Seas reviewers review Hackatime data carefully.  
+
 ```sh
 pipx install git+https://github.com/iamawatermelo/retime
 BEARER_TOKEN=... retime fetch <date to fetch heartbeats from> <optional date to fetch heartbeats until>
