@@ -115,8 +115,6 @@ async def write_heartbeats(heartbeats: list, token: str):
                 },
                 json=list(batch)
             ) as response:
-                print(await response.json())
-                print(response.status)
                 response.raise_for_status()
 
 if __name__ == "__main__":
